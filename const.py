@@ -38,7 +38,7 @@ MIN_IDLE_DURATION_FOR_RECOVERY_END_S = 300 # Min seconds climate must be idle (5
 UPDATE_HOUR = 11 # 11 AM local time
 UPDATE_MINUTE = 30
 
-# --- Constants for returned metrics keys (optional, for consistency) ---
+# --- Constants for returned metrics keys ---
 METRIC_OPTIMUM_SETPOINT = "optimum_setpoint"
 METRIC_AVG_OUTDOOR_TEMP_OVERNIGHT = "avg_outdoor_temp_overnight"
 METRIC_MIN_INDOOR_TEMP_SETBACK = "min_indoor_temp_setback"
@@ -49,3 +49,14 @@ METRIC_ACTUAL_RECOVERY_START_TIME = "actual_recovery_start_time"
 METRIC_ACTUAL_RECOVERY_END_TIME = "actual_recovery_end_time"
 METRIC_OVERNIGHT_SETPOINT_DETECTED = "overnight_setpoint_detected"
 METRIC_DAYTIME_TARGET_DETECTED = "daytime_target_detected"
+
+# --- Parameters for Optimum Setpoint Calculation ---
+OPTIMUM_SETPOINT_HISTORY_DAYS = 90  # Number of past days to consider from LTS (can be longer now)
+# Outdoor temperature categories for grouping historical data
+OUTDOOR_TEMP_CATEGORY_VERY_COLD_MAX_C = 5.0 # <= 5.0 is Very Cold
+OUTDOOR_TEMP_CATEGORY_COLD_MAX_C = 10.0    # > 5.0 and <= 10.0 is Cold
+# Anything > COLD_MAX_C will be considered Mild
+
+# Minimum number of data points required in a category to make a recommendation
+MIN_DATA_POINTS_FOR_OPTIMUM_REC = 5 # Increased slightly as LTS might provide more data over time
+
