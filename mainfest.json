@@ -1,7 +1,6 @@
 {
   "domain": "heating_analyzer",
   "name": "Heating Efficiency Analyser",
-  ## "documentation": "URL_TO_YOUR_DOCUMENTATION_IF_ANY",
   "dependencies": ["recorder", "history"],
   "codeowners": ["@nathbullen"],
   "requirements": [],
