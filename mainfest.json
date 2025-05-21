@@ -1,0 +1,11 @@
+{
+  "domain": "heating_analyzer",
+  "name": "Heating Efficiency Analyser",
+  ## "documentation": "URL_TO_YOUR_DOCUMENTATION_IF_ANY",
+  "dependencies": ["recorder", "history"],
+  "codeowners": ["@nathbullen"],
+  "requirements": [],
+  "version": "0.0.1",
+  "iot_class": "local_polling",
+  "config_flow": true
+}
